@@ -10,7 +10,7 @@ import Impressum from "./components/parts/Impressum";
 
 function App() {
   return (
-    <div className="relative min-h-[160vh] flex flex-col items-center justify-start">
+    <div className="relative min-h-screen flex flex-col items-center justify-start">
       <div className="fixed inset-0 -z-10 pointer-events-none">
         <Snowfall />
       </div>
