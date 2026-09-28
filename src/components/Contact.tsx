@@ -5,13 +5,13 @@ export default function Contact() {
         <h2 className="bg-clip-text text-transparent bg-[linear-gradient(to_right,#22C55E,#10B981,#06B6D4,#3B82F6,#22C55E)] font-bold text-2xl">
           Noch Fragen?
         </h2>
-        <p className="flex mt-4 text-xs ">
+        <p className="flex mt-4 text-sm ">
           Zögern Sie nicht mich zu kontaktieren. <br />
           Nutzen Sie dafür gerne die unten aufgeführte E-Mail Adresse!
         </p>
         <a
           href="mailto:zorigo.enkhtur@gmail.com"
-          className="flex underline hover:text-blue-400 bg-clip-text text-transparent transition-colors bg-[linear-gradient(to_right,#22C55E,#10B981,#06B6D4,#3B82F6,#22C55E)] font-bold text-xs mt-4"
+          className="flex underline hover:text-blue-400 bg-clip-text text-transparent transition-colors bg-[linear-gradient(to_right,#22C55E,#10B981,#06B6D4,#3B82F6,#22C55E)] font-bold text-sm mt-4"
         >
           ezoken59@yahoo.com
         </a>
@@ -20,7 +20,7 @@ export default function Contact() {
         <h2 className="bg-clip-text text-transparent bg-[linear-gradient(to_right,#22C55E,#10B981,#06B6D4,#3B82F6,#22C55E)] font-bold text-2xl">
           Weitere Erfahrungen
         </h2>
-        <p className="flex mt-4 text-xs ">
+        <p className="flex mt-4 text-sm ">
           Auf meinem GitHub-Profil finden Sie weitere Projekte, die ich im Laufe
           der Zeit erstellt habe. Dort können Sie sich auch selbst von meinem
           Code überzeugen.
@@ -28,7 +28,7 @@ export default function Contact() {
         <a
           href="https://github.com/Zorigo9191"
           target="_blank"
-          className="flex underline hover:text-blue-400 bg-clip-text text-transparent transition-colors bg-[linear-gradient(to_right,#22C55E,#10B981,#06B6D4,#3B82F6,#22C55E)] font-bold text-xs "
+          className="flex underline hover:text-blue-400 bg-clip-text text-transparent transition-colors bg-[linear-gradient(to_right,#22C55E,#10B981,#06B6D4,#3B82F6,#22C55E)] font-bold text-sm "
         >
           https://github.com/Zorigo9191
         </a>
