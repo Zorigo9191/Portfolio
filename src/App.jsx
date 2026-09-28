@@ -29,8 +29,7 @@ function App() {
         />
         <Route path="/impressum" element={<Impressum />} />
       </Routes>
-
-      <Footer />
+      <Footer className="flex mt-b" />
     </div>
   );
 }
