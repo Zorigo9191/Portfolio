@@ -8,7 +8,7 @@ export default function Impressum() {
         <h4 className="text-xl text-slate-400 mb-1">Angaben gemäß § 5 TMG</h4>
         <p className="text-xs">
           Zorigo ****** <br />
-          PLZ 76576, Weil am Rhein
+          PLZ 79576, Weil am Rhein
         </p>
       </div>
 
