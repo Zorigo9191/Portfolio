@@ -13,7 +13,7 @@ export default function Contact() {
           href="mailto:zorigo.enkhtur@gmail.com"
           className="flex underline hover:text-blue-400 bg-clip-text text-transparent transition-colors bg-[linear-gradient(to_right,#22C55E,#10B981,#06B6D4,#3B82F6,#22C55E)] font-bold text-sm mt-4"
         >
-          ezoken59@yahoo.com
+          zorigo.dev@proton.me
         </a>
       </div>
       <div>

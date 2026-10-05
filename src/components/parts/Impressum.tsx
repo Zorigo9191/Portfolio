@@ -8,8 +8,7 @@ export default function Impressum() {
         <h4 className="text-xl text-slate-400 mb-1">Angaben gemäß § 5 TMG</h4>
         <p className="text-xs">
           Zorigo ****** <br />
-          Hegenheimerstr 2 <br />
-          PLZ ***** Ort **********
+          PLZ 76576, Weil am Rhein
         </p>
       </div>
 
@@ -17,7 +16,7 @@ export default function Impressum() {
         <h2 className="text-xl font-bold mb-2">Kontakt</h2>
         <p className="text-xs">
           Telefon: 0176/7578**** <br />
-          E-Mail: ezoken59@yahoo.com
+          E-Mail: zorigo.dev@proton.me
         </p>
       </div>
     </div>
