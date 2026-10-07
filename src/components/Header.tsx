@@ -4,7 +4,6 @@ import profilePic from "../assets/profile.jpg";
 
 export default function Header() {
   return (
-    // <div className="flex flex-col md:flex-row md:justify-around w-full items-center  mx-auto mt-2 px-4 py-6 overflow-x-hidden md:max-w-150 lg:max-w-2/3 transition duration-1000 gap-6">
     <div className="flex flex-col md:flex-row md:justify-around w-full items-center mt-2 py-6 overflow-x-hidden transition duration-1000 gap-6">
       <div className="flex gap-4 p-2 shrink-0">
         <img
