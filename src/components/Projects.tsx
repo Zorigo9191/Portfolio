@@ -9,7 +9,8 @@ import fahr2 from "../assets/fahr2.png";
 
 export default function Projects() {
   return (
-    <div className="flex flex-col w-full px-4 mt-6 mx-auto md:max-w-150 lg:max-w-2/3 ">
+    // <div className="flex flex-col w-full px-4 mt-6 mx-auto md:max-w-150 lg:max-w-2/3 ">
+    <div className="flex flex-col w-full mt-6">
       <h2 className="flex w-full justify-center items-center bg-clip-text text-transparent bg-[linear-gradient(to_right,#22C55E,#10B981,#06B6D4,#3B82F6,#22C55E)] font-bold text-2xl">
         Meine Projekte
       </h2>

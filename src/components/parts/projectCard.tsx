@@ -31,7 +31,7 @@ export default function ProjectCard({
   return (
     <div className="border-slate-800 p-6 flex flex-col justify-between text-white h-full">
       <div>
-        <h3 className="text-md flex w-full justify-center font-semibold leading-none tracking-tight mb-2">
+        <h3 className="text-base flex w-full justify-center font-semibold leading-none tracking-tight mb-2">
           {title}
         </h3>
 
@@ -68,7 +68,7 @@ export default function ProjectCard({
           )}
         </div>
 
-        <p className="text-xs text-slate-400 mb-6">{description}</p>
+        <p className="text-sm text-slate-400 mb-6">{description}</p>
       </div>
 
       <div className="flex flex-col gap-2">
@@ -76,7 +76,7 @@ export default function ProjectCard({
           href={appLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center w-full rounded-md text-sm font-medium transition-colors h-7 px-4 py-2 bg-slate-800 hover:bg-green-900 text-white"
+          className="inline-flex items-center justify-center w-full rounded-md text-sm font-medium transition-colors h-10 px-4 py-2 bg-slate-800 hover:bg-green-900 text-white"
         >
           Zur App
           <ExternalLinkIcon className="h-4 w-4 ml-2" />

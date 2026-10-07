@@ -160,14 +160,14 @@ void main() {
     float inside = step(0.0, E.x) * step(E.x, 1.0) * step(0.0, E.y) * step(E.y, 1.0);
     vec2 safeUv = clamp(E, 0.0, 1.0);
 
-    float b = clamp(1.0 - E.y * 3.5, 0.0, 1.0) * 0.008;
+    float b = clamp(1.0 - E.y * 3.5, 0.0, 1.0) * 0.002;
     vec2 soft = blurRG(safeUv, b);
     vec2 sharp = blurRG(safeUv, b * 0.1);
 
     float d = length((vUv - uPtr) / vec2(1.0, aspect));
     float k = 1.0 - pow(smoothstep(0.0, max(uReach, 1e-4), d), 3.0);
 
-    float mask = mix(soft.r, sharp.g, k) * inside;
+    float mask = mix(soft.r, sharp.r, k) * inside;
     vec3 fill = mix(uShade, uText, smoothstep(0.0, 1.0, E.y));
 
     vec2 P = vec2(vUv.x * aspect, vUv.y);

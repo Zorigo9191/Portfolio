@@ -9,27 +9,52 @@ import Footer from "./components/Footer";
 import Impressum from "./components/parts/Impressum";
 
 function App() {
+  // return (
+  //   <div className="relative min-h-screen flex flex-col items-center justify-start">
+  //     <div className="fixed inset-0 -z-10 pointer-events-none">
+  //       <Snowfall />
+  //     </div>
+
+  //     <Routes>
+  //       <Route
+  //         path="/"
+  //         element={
+  //           <>
+  //             <Header />
+  //             <Hero />
+  //             <Projects />
+  //             <Contact />
+  //             <Footer className="flex mt-b" />
+  //           </>
+  //         }
+  //       />
+  //       <Route path="/impressum" element={<Impressum />} />
+  //     </Routes>
+  //   </div>
+  // );
   return (
-    <div className="relative min-h-screen flex flex-col items-center justify-start">
+    <div className="relative min-h-screen">
       <div className="fixed inset-0 -z-10 pointer-events-none">
         <Snowfall />
       </div>
 
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Header />
-              <Hero />
-              <Projects />
-              <Contact />
-              <Footer className="flex mt-b" />
-            </>
-          }
-        />
-        <Route path="/impressum" element={<Impressum />} />
-      </Routes>
+      <main className="w-full max-w-4xl mx-auto px-4 flex flex-col">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Header />
+                <Hero />
+                <Projects />
+                <Contact />
+                <Footer />
+              </>
+            }
+          />
+          <Route path="/impressum" element={<Impressum />} />
+        </Routes>
+      </main>
     </div>
   );
 }
