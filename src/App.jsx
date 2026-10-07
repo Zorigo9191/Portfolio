@@ -24,12 +24,12 @@ function App() {
               <Hero />
               <Projects />
               <Contact />
+              <Footer className="flex mt-b" />
             </>
           }
         />
         <Route path="/impressum" element={<Impressum />} />
       </Routes>
-      <Footer className="flex mt-b" />
     </div>
   );
 }

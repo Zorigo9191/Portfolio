@@ -11,15 +11,15 @@ export default function Footer() {
         to={isImpressum ? "/" : "/impressum"}
         className={
           isImpressum
-            ? "inline-flex items-center gap-2 px-4 py-1.5 rounded-md text-xs font-medium bg-slate-700 hover:bg-slate-500 text-white transition"
-            : "flex hover:text-blue-400 transition font-light text-xs"
+            ? "inline-flex items-center gap-2 px-4 py-1.5 rounded-md text-sm font-medium bg-slate-700 hover:bg-slate-500 text-white transition"
+            : "flex hover:text-blue-400 transition font-light text-sm"
         }
       >
         {isImpressum && <ArrowLeft className="h-4 w-4" />}
         {isImpressum ? "Zurück" : "Impressum"}
       </Link>
 
-      <p className="flex font-light text-xs">©Zorigo 2026</p>
+      <p className="flex font-light text-sm">©Zorigo 2026</p>
     </div>
   );
 }

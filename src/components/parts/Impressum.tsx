@@ -6,7 +6,7 @@ export default function Impressum() {
       <div>
         <h2 className="text-2xl font-bold mb-2">Impressum</h2>
         <h4 className="text-xl text-slate-400 mb-1">Angaben gemäß § 5 DDG</h4>
-        <p className="text-xs">
+        <p className="text-sm">
           Zorigo <br />
           PLZ 79576, Weil am Rhein
         </p>
@@ -14,7 +14,7 @@ export default function Impressum() {
 
       <div>
         <h2 className="text-xl font-bold mb-2">Kontakt</h2>
-        <p className="text-xs">E-Mail: zorigo.dev@proton.me</p>
+        <p className="text-sm">E-Mail: zorigo.dev@proton.me</p>
       </div>
     </div>
   );
