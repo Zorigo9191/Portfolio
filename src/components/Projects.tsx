@@ -26,17 +26,7 @@ export default function Projects() {
             appLink={"https://zorigo9191.github.io/wetter-app2/"}
           />
         </p>
-        <p className="border-2  border-[#3EDED3] rounded-2xl ">
-          <ProjectCard
-            title={"Pizzeria Mama Mia"}
-            description={
-              "Die Website für die fiktive Pizzeria Mamma Mia ist ein moderner One-Pager in ansprechendem dunklen Design. Das Layout ist darauf ausgelegt, den Besucher der Seite zu einem Besuch im Restaurant anzuregen. Ich habe das Design responsive umgesetzt und für gängige Bildschirmgrößen optimiert."
-            }
-            githubLink={"https://github.com/Zorigo9191/pizzeria"}
-            imageSrc={[piz1, piz2]}
-            appLink={"https://zorigo9191.github.io/pizzeria/"}
-          />
-        </p>
+
         <p
           className="border-2
           border-[#3EDED3] rounded-2xl"
@@ -49,6 +39,18 @@ export default function Projects() {
             githubLink={"https://github.com/Zorigo9191/Fahrlehrer-Assistent"}
             imageSrc={[fahr1, fahr2]}
             appLink={"https://fahrlehrer-assistent.vercel.app/"}
+          />
+        </p>
+
+        <p className="border-2  border-[#3EDED3] rounded-2xl ">
+          <ProjectCard
+            title={"Pizzeria Mama Mia"}
+            description={
+              "Die Website für die fiktive Pizzeria Mamma Mia ist ein moderner One-Pager in ansprechendem dunklen Design. Das Layout ist darauf ausgelegt, den Besucher der Seite zu einem Besuch im Restaurant anzuregen. Ich habe das Design responsive umgesetzt und für gängige Bildschirmgrößen optimiert."
+            }
+            githubLink={"https://github.com/Zorigo9191/pizzeria"}
+            imageSrc={[piz1, piz2]}
+            appLink={"https://zorigo9191.github.io/pizzeria/"}
           />
         </p>
       </div>
