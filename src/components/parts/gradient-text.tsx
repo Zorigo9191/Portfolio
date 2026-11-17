@@ -37,7 +37,7 @@ interface AuroraTextProps {
 }
 
 const DEFAULT_FONT: AuroraTextFont = {
-  fontFamily: "Inter",
+  fontFamily: "Inherit",
   fontWeight: 700,
   fontSize: 30,
   lineHeight: "1.5em",
@@ -63,7 +63,7 @@ const APPEAR_TRIGGER: "default" | "hover" | "scroll" = "default";
 
 export default function AuroraText(props: AuroraTextProps) {
   const {
-    text = "Frontend-Entwickler (Quereinstieg) · Backend on the way",
+    text = "Fullstack Entwickler",
     font = DEFAULT_FONT,
     tag = "h1",
     colors = ["#22C55E", "#10B981", "#06B6D4", "#3B82F6", "#22C55E"],

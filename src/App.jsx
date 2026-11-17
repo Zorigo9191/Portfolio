@@ -25,12 +25,12 @@ function App() {
                 <Hero />
                 <Projects />
                 <Contact />
-                <Footer />
               </>
             }
           />
           <Route path="/impressum" element={<Impressum />} />
         </Routes>
+        <Footer />
       </main>
     </div>
   );

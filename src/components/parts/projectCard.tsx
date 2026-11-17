@@ -5,6 +5,7 @@ import {
   ChevronRight,
   ExternalLinkIcon,
 } from "lucide-react";
+import { TECH_ICONS } from "./techIcons";
 
 type ProjectCardProps = {
   title: string;
@@ -12,6 +13,7 @@ type ProjectCardProps = {
   githubLink: string;
   appLink: string;
   imageSrc: string[];
+  tech?: string[];
 };
 
 export default function ProjectCard({
@@ -20,22 +22,21 @@ export default function ProjectCard({
   githubLink,
   appLink,
   imageSrc,
+  tech,
 }: ProjectCardProps) {
   const [index, setIndex] = useState(0);
+  const last = imageSrc.length - 1;
 
-  const goTo = (newIndex: number) => {
-    const clamped = Math.max(0, Math.min(newIndex, imageSrc.length - 1));
-    setIndex(clamped);
-  };
+  const goTo = (i: number) => setIndex(Math.max(0, Math.min(i, last)));
 
   return (
-    <div className="border-slate-800 p-6 flex flex-col justify-between text-white h-full">
+    <div className="flex h-full flex-col justify-between p-6 text-white">
       <div>
-        <h3 className="text-base flex w-full justify-center font-semibold leading-none tracking-tight mb-2">
+        <h3 className="mb-2 flex min-h-14 items-center justify-center text-center text-lg font-semibold tracking-tight">
           {title}
         </h3>
 
-        <div className="relative w-30 h-40 mx-auto mt-4 mb-4 overflow-hidden rounded-xl">
+        <div className="relative mx-auto my-4 h-64 w-36 overflow-hidden rounded-xl">
           <div
             className="flex h-full transition-transform duration-300 ease-in-out"
             style={{ transform: `translateX(-${index * 100}%)` }}
@@ -44,8 +45,8 @@ export default function ProjectCard({
               <img
                 key={i}
                 src={src}
-                className="w-30 h-50 object-cover shrink-0"
-                alt={`${title} Screenshot ${i + 1}`}
+                alt={`${title}, Screenshot ${i + 1}`}
+                className="h-full w-full shrink-0 object-cover object-top"
               />
             ))}
           </div>
@@ -53,14 +54,20 @@ export default function ProjectCard({
           {imageSrc.length > 1 && (
             <>
               <button
+                type="button"
+                aria-label="Vorheriges Bild"
+                disabled={index === 0}
                 onClick={() => goTo(index - 1)}
-                className="absolute left-1 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-1"
+                className="absolute left-1 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-1 text-white hover:bg-black/70 disabled:opacity-30"
               >
                 <ChevronLeft className="h-5 w-5" />
               </button>
               <button
+                type="button"
+                aria-label="Nächstes Bild"
+                disabled={index === last}
                 onClick={() => goTo(index + 1)}
-                className="absolute right-1 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-1"
+                className="absolute right-1 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-1 text-white hover:bg-black/70 disabled:opacity-30"
               >
                 <ChevronRight className="h-5 w-5" />
               </button>
@@ -68,27 +75,49 @@ export default function ProjectCard({
           )}
         </div>
 
-        <p className="text-sm text-slate-400 mb-6">{description}</p>
+        <p className="mb-6 text-sm leading-relaxed text-slate-300">
+          {description}
+        </p>
       </div>
 
       <div className="flex flex-col gap-2">
+        {tech && tech.length > 0 && (
+          <ul className="mb-2 flex min-h-16 flex-wrap content-start gap-2">
+            {tech.map((t) => {
+              const entry = TECH_ICONS[t];
+              const Icon = entry?.icon;
+              return (
+                <li
+                  key={t}
+                  className="inline-flex items-center gap-1.5 rounded-full bg-accent/10 px-2.5 py-1 text-sm text-accent"
+                >
+                  {Icon && (
+                    <Icon className="h-4 w-4" style={{ color: entry.color }} />
+                  )}
+                  {t}
+                </li>
+              );
+            })}
+          </ul>
+        )}
+
         <a
           href={appLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center w-full rounded-md text-sm font-medium transition-colors h-10 px-4 py-2 bg-slate-800 hover:bg-green-900 text-white"
+          className="inline-flex h-10 w-full items-center justify-center rounded-md bg-accent px-4 text-sm font-semibold text-slate-950 transition-colors hover:bg-accent/80"
         >
           Zur App
-          <ExternalLinkIcon className="h-4 w-4 ml-2" />
+          <ExternalLinkIcon className="ml-2 h-4 w-4" />
         </a>
         <a
           href={githubLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center w-full rounded-md text-sm font-medium transition-colors h-10 px-4 py-2 border border-slate-700 bg-slate-800 hover:bg-green-900 text-white"
+          className="inline-flex h-10 w-full items-center justify-center rounded-md border border-accent/50 px-4 text-sm font-medium text-white transition-colors hover:bg-accent/10"
         >
           GitHub Code
-          <ExternalLink className="h-4 w-4 ml-2" />
+          <ExternalLink className="ml-2 h-4 w-4" />
         </a>
       </div>
     </div>
