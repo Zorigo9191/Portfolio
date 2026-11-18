@@ -19,6 +19,9 @@ export default function Projects() {
         <p className="border-2  border-[#3EDED3] rounded-2xl ">
           <ProjectCard
             title={"DevBoard"}
+            demoLogin={
+              "\nTest Nutzer: dev-user1@a.de, dev-user2@a.de \n· Passwort: 400400"
+            }
             tech={[
               "Eigenes Backend",
               "React",
@@ -51,6 +54,9 @@ export default function Projects() {
             ]}
             description={
               "Diese App wurde speziell für den Einsatz in Fahrschulen entwickelt. Sie unterstützt Fahrlehrer dabei, ihren Arbeitsalltag effizienter zu organisieren und Aufgaben zentral zu verwalten. Ziel ist es, den Fahrschulalltag zu vereinfachen und organisatorische Aufgaben abzunehmen. Neben dem Frontend (React, Tailwind, TypeScript) habe ich auch das Backend selbst gebaut: eine NestJS-API mit Supabase als Datenbank."
+            }
+            demoLogin={
+              "\nFahrschulbüro: office@a.de \n· Passwort: 300300\nFahrlehrer:   fahrlehrer-1@a.de, fahrlehrer-2@a.de \n· Passwort: 200200\nFahrschüler: s1@a.de, s2@a.de \n· Passwort: 100100"
             }
             githubLink={"https://github.com/Zorigo9191/Fahrlehrer-Assistent"}
             imageSrc={[fahr1, fahr2]}

@@ -14,6 +14,7 @@ type ProjectCardProps = {
   appLink: string;
   imageSrc: string[];
   tech?: string[];
+  demoLogin?: string;
 };
 
 export default function ProjectCard({
@@ -23,6 +24,7 @@ export default function ProjectCard({
   appLink,
   imageSrc,
   tech,
+  demoLogin,
 }: ProjectCardProps) {
   const [index, setIndex] = useState(0);
   const last = imageSrc.length - 1;
@@ -78,6 +80,13 @@ export default function ProjectCard({
         <p className="mb-6 text-sm leading-relaxed text-slate-300">
           {description}
         </p>
+
+        {demoLogin && (
+          <p className="mb-4 whitespace-pre-line rounded-md border border-[#3EDED3]/40 bg-slate-900/60 p-3 text-sm text-slate-300">
+            <span className="font-semibold text-[#3EDED3]">Demo-Zugang: </span>
+            {demoLogin}
+          </p>
+        )}
       </div>
 
       <div className="flex flex-col gap-2">
