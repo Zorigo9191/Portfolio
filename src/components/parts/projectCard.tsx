@@ -80,16 +80,15 @@ export default function ProjectCard({
         <p className="mb-6 text-sm leading-relaxed text-slate-300">
           {description}
         </p>
-
-        {demoLogin && (
-          <p className="mb-4 whitespace-pre-line rounded-md border border-[#3EDED3]/40 bg-slate-900/60 p-3 text-sm text-slate-300">
-            <span className="font-semibold text-[#3EDED3]">Demo-Zugang: </span>
-            {demoLogin}
-          </p>
-        )}
       </div>
 
       <div className="flex flex-col gap-2">
+        {demoLogin && (
+          <div className="mb-2 min-h-50 rounded-md border border-[#3EDED3]/40 bg-slate-900/60 p-3 text-sm text-slate-300">
+            <p className="mb-1 font-semibold text-[#3EDED3]">Demo-Zugang</p>
+            <p className="whitespace-pre-line">{demoLogin}</p>
+          </div>
+        )}
         {tech && tech.length > 0 && (
           <ul className="mb-2 flex min-h-16 flex-wrap content-start gap-2">
             {tech.map((t) => {

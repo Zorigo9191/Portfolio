@@ -20,7 +20,7 @@ export default function Projects() {
           <ProjectCard
             title={"DevBoard"}
             demoLogin={
-              "\nTest Nutzer: dev-user1@a.de, dev-user2@a.de \n· Passwort: 400400"
+              "\nTest Nutzer:  \ndev-user1@a.de,  \ndev-user2@a.de \n· Passwort: 400400"
             }
             tech={[
               "Eigenes Backend",
